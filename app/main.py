@@ -6,7 +6,7 @@ from .routers import posts, users, auth, votes
 
 app = FastAPI()
 
-origins = []
+origins = ["*"]
 #origins = ["https://www.google.com"]
 
 # test middleware by running the following from a browser console after loading google.com
