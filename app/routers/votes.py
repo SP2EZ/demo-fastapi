@@ -1,6 +1,6 @@
 # Path Operations for collecting votes
 
-from fastapi import Depends, Response, status, HTTPException, APIRouter
+from fastapi import Depends, status, HTTPException, APIRouter
 from .. import schemas, database, oauth2
 
 router = APIRouter(prefix="/votes", tags=['Votes'])

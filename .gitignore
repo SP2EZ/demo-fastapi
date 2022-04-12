@@ -1,3 +1,6 @@
 __pycache__
 venvfastapi/
 .env
+/app/test_with_postgresdb.py
+/app/test_without_db.py
+/app/main_bkg.py
