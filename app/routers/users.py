@@ -1,6 +1,6 @@
 # Path Operations for users
 
-from fastapi import Response, status, HTTPException, APIRouter
+from fastapi import status, HTTPException, APIRouter
 from .. import schemas, database, utils
 
 router = APIRouter(prefix="/users", tags=['Users'])
