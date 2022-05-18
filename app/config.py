@@ -7,6 +7,7 @@ from pydantic import BaseSettings
 class Settings(BaseSettings):
     DATABASE_HOSTNAME: str
     DB_NAME: str
+    DB_NAME_TEST: str
     DB_PORT: str
     DB_USERNAME: str
     DB_PASSWORD: str

@@ -36,7 +36,7 @@ def create_access_token(payLoad: dict):
     #print(f"UTCNOW - {expiration}")
     # Call datetime.datetime.isoformat() to convert datetime.datetime into a ISO date format, which is compatible with JSON
     #expiration = expiration.isoformat()
-    # datetime.datetime.timestamp() comverts datetime in epochtime
+    # datetime.datetime.timestamp() converts datetime in epochtime
     expiration = expiration.timestamp()
     #print(f"UTCNOW ISO Format- {expiration}")
     # Add expiration to the payLoad(dictionary)

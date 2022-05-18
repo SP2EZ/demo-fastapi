@@ -7,7 +7,9 @@ import psycopg
 from psycopg import rows
 import time
 from . import config
-#print(f"LOOKATME: {config.settings.DATABASE_HOSTNAME}")
+
+""" Comment below for Using Testing DB """ 
+"""
 try:
     # Connect to an existing database
     conn = psycopg.connect(host=config.settings.DATABASE_HOSTNAME, dbname=config.settings.DB_NAME, user=config.settings.DB_USERNAME, password=config.settings.DB_PASSWORD, port=config.settings.DB_PORT, row_factory=rows.dict_row)
@@ -22,3 +24,15 @@ except Exception as error:
 #    conn.commit()
 #finally:
 #    conn.close()
+"""
+
+""" Comment below for Using Live DB """
+try:
+    # Connect to an existing database
+    conn = psycopg.connect(host=config.settings.DATABASE_HOSTNAME, dbname=config.settings.DB_NAME_TEST, user=config.settings.DB_USERNAME, password=config.settings.DB_PASSWORD, port=config.settings.DB_PORT, row_factory=rows.dict_row)
+    cursor = conn.cursor()
+    print("Test Database Connected !!!")
+except Exception as error:
+    print("Test Database Connection Failed, Error Encountered :")
+    print(error)
+    time.sleep(15)
