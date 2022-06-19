@@ -3,6 +3,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .routers import posts, users, auth, votes
+import socket
 
 app = FastAPI()
 
@@ -24,9 +25,14 @@ app.include_router(users.router) # /users
 app.include_router(auth.router) # /login
 app.include_router(votes.router) # /votes
 
+hostname = socket.gethostname()
+local_ip = socket.gethostbyname(hostname)
+
+#print(local_ip)
+
 @app.get("/")
 def root():
-    return {"message": "Hello, you have reached API Default Path"}
+    return {"message": f"Hello, you have reached API Default Path for Instance: {local_ip}"}
 
 
  
